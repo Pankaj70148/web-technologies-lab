@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+    
+      <style>
+      
+          #myCanvas{border:1px solid red;background-color: green;color: white;}
+          #myCanvas2{border:1px solid red;background-color: green;color: white;}
+
+ </style>
+   </head>
+   
+   <body bgcolor="aqua">
+<h2>create a Canvas</h2>
+<div>
+     <canvas id = "mycanvas" width = "200" height = "100" style="border:1px solid red;background-color: blue;"></canvas>
+     <div>
+<div>
+   <h3> Rectangular Canvas </h3>
+   <button onclick="myCanvas()">click1</button>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid red;background-color: green;color: white;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+function myCanvas(){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+}
+</script> 
+
+
+<button onclick="myCanvas2()">click2 </button>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+<script>
+function myCanvas2(){
+var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+}
+</script> 
+
+    </div>
+
+
+
+<div>
+      <h3>Click to play audio</h3>
+      <audio src="/Chaudhary - Jubin Nautiyal 320 Kbps.mp3" controls width="100%"></audio>
+    </div>
+
+    <div>
+      <h3> play video</h3>
+      <video src="Web-Tech\Nain Ta Heere - Jugjugg Jeeyo.lnk" controls width="60%"></video>
+    </div>
+    <br>
+
+    <div>
+      <p><h3>Current Updated Geo-Location</h3></p>
+      <p id = "showPosition"></p>
+        <script>
+        // Request permission to access the user's location
+          navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+        // Define a success callback function to get the user's location
+        function successCallback(position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          // Update the user's location in the page
+          document.getElementById("showPosition").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        }
+
+        // Define an error callback function in case the user denies permission
+        function errorCallback(error) {
+          console.log("Error getting location: " + error.message);
+        }
+
+
+        // Continuously update the user's location using watchPosition()
+        var watchId = navigator.geolocation.watchPosition(successCallback, errorCallback);
+        // console.log(watchId);
+
+      </script>
+    </div>
+  </div>
+  <div>
+         
+   </body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html>
+<head>
+
+</head>
+<body bgcolor="aqua">
+
+<h1>Registation form</h1>
+<table border="1">
+
+<tr>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+<td>
+|
+</td>
+</tr>
+
+<tr>
+<td>
+|
+</td>
+</tr>
+<tr>
+<td>
+|
+</tr>
+</td>
+<tr>
+<td colspan="16" rowspan="3">
+<h3><center>PHOTO</center></h3>
+
+</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+
+</tr>
+
+</table>
+<br>
+<form>
+Name: <input type= "text"><br><br>
+Sys_id: <input type="text"><br><br>
+RollNo: <input type="text"><br><br>
+DOB<input type="date"><br><br>
+Mob_no: <input type="number" placeholder="number"><br><br>
+Gender: <input type= "radio" name= "gender">male
+<input type="radio" name = "gender">female<br><br>
+Course: <input type="text"><br><br>
+Branch: <input type="text"><br><br>
+Collage: <input type="text"><br><br>
+Email: <input type="gmail"><br><br>
+Password: <input type= "password"><br><br>
+<button input type= "submit">submit</button><br><br>
+<a href="https://www.google.com/">google</a><br><br>
+<a href="introduction.html">go to home</a>
+
+</form>
+
+
+</form>
+
+<h1>My Location</h1>
+    
+<button onclick="getlocation()">Click me</button> 
+<p id="location"></p>
+    <script>
+    function getlocation() {  
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          alert("geolocation is suppoerted by your browser")
+
+          document.getElementById("location").innerHTML = location;
+        });
+      } else {
+        document.getElementById("location").innerHTML =
+          "Geolocation is not supported by this browser.";
+      }
+}
+    </script>
+<section>
+<h1>Resume Uploading</h1>
+<P>upload resume</P>
+<form>
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+</section>
+<section>
+<h1>Certificate Uploading</h1>
+<P>upload certificate</P>
+<form>
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+</section><br>
+<a href="Week1.html">Profile page</a>
+
+</body>
+
+
+</html>
